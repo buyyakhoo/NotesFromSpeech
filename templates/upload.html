@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Upload {% endblock %}
+
+{% block content %}
+
+    <h1>Upload</h1>
+
+    <form action="/uploader" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" value="Transcribe" />
+    </form>
+
+    {% if transcript != "" %}
+        <div>
+            <h1>Transcript</h1>
+            <p>{{ transcript }}</p>
+            <p>Duration: {{ t_audio }}</p>
+        </div>
+    {% endif %}
+
+{% endblock %}
