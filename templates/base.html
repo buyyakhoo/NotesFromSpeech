@@ -12,10 +12,18 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/upload">Upload</a></li>
+            <li><a href="/record">Record</a></li>
         </ul>
     </header>
 
-    {% block content %} {% endblock %}
+    {% block content %} 
+        {% block transcribe %}
+
+        {% endblock %}
+    {% endblock %}
+
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="{{url_for('static', filename='js/app.js')}}"></script> 
 
 </body>
 </html>

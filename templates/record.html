@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Record {% endblock %}
+
+{% block content %} 
+    <div id="controls">
+        <button id="recordButton">Start</button>
+        <button id="pauseButton" disabled>Pause</button>
+        <button id="stopButton" disabled>Stop</button>
+    </div>
+
+    <h3>Recording</h3>
+
+<!-- 
+    {% block transcribe %} 
+        {% if transcript != "" %}
+            <div>
+                <h1>Transcript</h1>
+                <p>{{ transcript }}</p>
+            </div>
+        {% endif %}
+    {% endblock %} -->
+
+
+    <ol id="recordingsList"></ol>
+{% endblock %}

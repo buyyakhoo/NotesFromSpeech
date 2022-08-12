@@ -11,11 +11,14 @@
         <input type="submit" value="Transcribe" />
     </form>
 
-    {% if transcript != "" %}
-        <div>
-            <h1>Transcript</h1>
-            <p>{{ transcript }}</p>
-        </div>
-    {% endif %}
+    
+    <!-- {% block transcribe %} 
+        {% if transcript != "" %}
+            <div>
+                <h1>Transcript</h1>
+                <p>{{ transcript }}</p>
+            </div>
+        {% endif %}
+    {% endblock %} -->
 
 {% endblock %}

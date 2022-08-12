@@ -15,6 +15,10 @@ def home():
 def upload():
     return render_template('upload.html')
 
+@app.route('/record')
+def record():
+    return render_template('record.html')
+
 @app.route('/uploader', methods=['GET', 'POST'])
 def upload_file():
     transcript = ""
@@ -46,7 +50,7 @@ def upload_file():
             transcript = recognizer.recognize_google(data, key=None)
 
         # return render_template('upload.html', transcript=transcript, t_audio=t_audio)
-        return render_template('upload.html', transcript=transcript)
+        return render_template('transcribe.html', transcript=transcript)
 
 if __name__ == '__main__':
     app.run(debug=True)
