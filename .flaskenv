@@ -1,0 +1,2 @@
+FLASK_DEBUG=development
+FLASK_APP=app.py

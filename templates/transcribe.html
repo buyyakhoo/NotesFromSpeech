@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Record {% endblock %}
+
+{% block content %} 
+
+    {% block transcribe %} 
+        {% if transcript != "" %}
+            <div>
+                <h1>Transcript</h1>
+                <p>{{ transcript }}</p>
+            </div>
+        {% endif %}
+    {% endblock %}
+
+{% endblock %}

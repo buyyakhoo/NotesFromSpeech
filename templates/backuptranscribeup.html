@@ -1,0 +1,10 @@
+{% extends "upload.html" %}
+
+{% block transcribe %} 
+    {% if transcript != "" %}
+        <div>
+            <h1>Transcript</h1>
+            <p>{{ transcript }}</p>
+        </div>
+    {% endif %}
+{% endblock %}
