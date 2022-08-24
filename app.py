@@ -28,8 +28,6 @@ def upload_file():
     if request.method == 'POST':
         print("Form Data Received!!")
         lang = request.form['lang']
-        if lang == '':
-            lang = "en-US"
         if "file" not in request.files:
             return redirect(url_for('upload'))
 
@@ -63,7 +61,9 @@ def upload_file():
             except sr.RequestError as e:
                 transcript = "Could not request results from Google Speech Recognition service; {0}".format(e)
         # return render_template('upload.html', transcript=transcript, t_audio=t_audio)
-        return render_template('transcribe.html', transcript="".join(fastpunct.punct([transcript])))
+        if (lang == "en-US"):
+            transcript="".join(fastpunct.punct([transcript]))
+        return render_template('transcribe.html', transcript=transcript)
 
 if __name__ == '__main__':
     app.run(debug=True)
