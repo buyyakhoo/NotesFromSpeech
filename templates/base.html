@@ -26,39 +26,7 @@
 
         {% endblock %}
     {% endblock %}
-    <canvas class="background"></canvas>
-    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-    <script src="{{url_for('static', filename='js/app.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-    <script>
-      window.onload = function () {
-        Particles.
-          init
-          ({
-            selector: '.background',
-            maxParticles: 450,
-            color: '#edebf5',
-            // options for breakpoints
-            responsive: [
-              {
-                breakpoint: 600,
-                options: {
-                  maxParticles: 200,
-                  color: '#edebf5',
-                  connectParticles: false
-                }
-              },
-              {
-                breakpoint: 1998,
-                options: {
-                  maxParticles: 120,
-                  connectParticles: true,
-                  color: '#edebf5'
-                }
-              }
-            ]
-          });
-      };
-    </script>
+    {% block script %}
+    {% endblock %}
 </body>
 </html>

@@ -9,3 +9,37 @@
     <div class="title">Notes From Speech</div>
 </div>
 {% endblock %}
+{% block script %}
+<canvas class="background"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+<script>
+  window.onload = function () {
+    Particles.
+      init
+      ({
+        selector: '.background',
+        maxParticles: 450,
+        color: '#edebf5',
+        // options for breakpoints
+        responsive: [
+          {
+            breakpoint: 600,
+            options: {
+              maxParticles: 200,
+              color: '#edebf5',
+              connectParticles: false
+            }
+          },
+          {
+            breakpoint: 1998,
+            options: {
+              maxParticles: 120,
+              connectParticles: true,
+              color: '#edebf5'
+            }
+          }
+        ]
+      });
+  };
+</script>
+{% endblock %}
