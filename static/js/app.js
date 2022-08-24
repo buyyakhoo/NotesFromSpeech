@@ -88,6 +88,7 @@ function createDownloadLink(blob) {
 
 
     var filename = new Date().toISOString();
+    //let lang = document.getElementById("lang").value;
     //filename to send to server without extension 
     //upload link 
     var upload = document.createElement('a');
@@ -103,6 +104,8 @@ function createDownloadLink(blob) {
         };
         var fd = new FormData();
         fd.append("file", blob, filename);
+        fd.append("lang", document.getElementById("lang").value);
+       // fd.append("lang", blob, lang);
         xhr.open("POST", "/uploader", true);
         xhr.send(fd);
     })

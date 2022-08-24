@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% block css %}{% endblock %}
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -21,9 +26,39 @@
 
         {% endblock %}
     {% endblock %}
-
+    <canvas class="background"></canvas>
     <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-    <script src="{{url_for('static', filename='js/app.js')}}"></script> 
-
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script>
+      window.onload = function () {
+        Particles.
+          init
+          ({
+            selector: '.background',
+            maxParticles: 450,
+            color: '#edebf5',
+            // options for breakpoints
+            responsive: [
+              {
+                breakpoint: 600,
+                options: {
+                  maxParticles: 200,
+                  color: '#edebf5',
+                  connectParticles: false
+                }
+              },
+              {
+                breakpoint: 1998,
+                options: {
+                  maxParticles: 120,
+                  connectParticles: true,
+                  color: '#edebf5'
+                }
+              }
+            ]
+          });
+      };
+    </script>
 </body>
 </html>
