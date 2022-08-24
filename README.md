@@ -1,3 +1,3 @@
 # NotesFromSpeech
 ## Usage
-- pip install fastpunct
+- ```pip install fastpunct```
