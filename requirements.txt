@@ -66,7 +66,6 @@ tokenizers==0.12.1
 torch==1.12.1
 tqdm==4.64.0
 transformers==4.21.1
-txt2txt==1.0.9
 typing_extensions==4.3.0
 urllib3==1.26.12
 Werkzeug==2.2.1
