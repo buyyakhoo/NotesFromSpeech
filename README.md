@@ -1,4 +1,5 @@
 # NotesFromSpeech
+This is a school project made by [@buyyakhoo](https://github.com/buyyakhoo/) & [@Saltywan](https://github.com/saltywan)
 ## Installation
 - ```virtualenv venv```
 - ```pip install flask```
