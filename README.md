@@ -7,7 +7,6 @@ This project is a Web Application for transcribing voice/audio to text using [Sp
 - English
 ## Installation
 - ```virtualenv venv```
-- ```pip install flask```
 - ```pip install fastpunct```
 ## Usage
 - Record audio and upload in the record page
