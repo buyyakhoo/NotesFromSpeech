@@ -1,16 +1,28 @@
 {% extends "base.html" %}
 
-{% block title %} Record {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/normal.css')}}">
+{% endblock %}
+
+{% block title %} Transcribe {% endblock %}
 
 {% block content %} 
+    
+            {% block transcribe %} 
+                {% if transcript != "" %}
+                    <div class="main">
+                        <div class="container">
+                            <div>
+                                <h1>Transcript</h1>
+                                <p>{{ transcript }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
 
-    {% block transcribe %} 
-        {% if transcript != "" %}
-            <div>
-                <h1>Transcript</h1>
-                <p>{{ transcript }}</p>
-            </div>
-        {% endif %}
-    {% endblock %}
+
+
+    
 
 {% endblock %}

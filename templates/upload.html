@@ -1,19 +1,29 @@
 {% extends "base.html" %}
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/normal.css')}}">
+{% endblock %}
+
 {% block title %} Upload {% endblock %}
 
 {% block content %}
 
-    <h1>Upload</h1>
+    <div class="main">
+        <div class="container">
+            <h1>Upload</h1>
 
-    <form action="/uploader" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept="audio/wav" />
-        <select name="lang">
-            <option value="en-US" selected>English</option>
-            <option value="th-TH">Thai</option>
-        </select>
-        <input type="submit" value="Transcribe" />
-    </form>
+            <form action="/uploader" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="audio/wav" />
+                <select name="lang">
+                    <option value="en-US" selected>English</option>
+                    <option value="th-TH">Thai</option>
+                </select>
+                <input type="submit" value="Transcribe" />
+            </form>
+        </div>
+    </div>
+
+    
 
     
     <!-- {% block transcribe %} 

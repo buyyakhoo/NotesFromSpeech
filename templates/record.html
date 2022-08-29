@@ -1,20 +1,27 @@
 {% extends "base.html" %}
 
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/normal.css')}}">
+{% endblock %}
+
 {% block title %} Record {% endblock %}
 
 {% block content %} 
-    <div id="controls">
-        <button id="recordButton">Start</button>
-        <button id="pauseButton" disabled>Pause</button>
-        <button id="stopButton" disabled>Stop</button>
-        <select id="lang">
-            <option value="en-US" selected>English</option>
-            <option value="th-TH">Thai</option>
-        </select>
+    <div class="main">
+        <div class="container" id="lstcont">
+            <h1>Record</h1>
+            <div id="controls">
+                <button id="recordButton">Start</button>
+                <button id="pauseButton" disabled>Pause</button>
+                <button id="stopButton" disabled>Stop</button>
+                <select id="lang">
+                    <option value="en-US" selected>English</option>
+                    <option value="th-TH">Thai</option>
+                </select>
+            </div>
+            
+        </div>
     </div>
-
-    <h3>Recording</h3>
-
 <!-- 
     {% block transcribe %} 
         {% if transcript != "" %}

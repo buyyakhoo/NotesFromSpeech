@@ -12,6 +12,7 @@ var audioContext //audio context to help us record
 var recordButton = document.getElementById("recordButton");
 var stopButton = document.getElementById("stopButton");
 var pauseButton = document.getElementById("pauseButton");
+var maindiv = document.getElementById("lstcont");
 
 //add events to those 2 buttons
 recordButton.addEventListener("click", startRecording);
@@ -130,10 +131,11 @@ function createDownloadLink(blob) {
 	link.href = url;
 	link.download = filename+".wav"; //download forces the browser to donwload the file using the  filename
 	link.innerHTML = "Save";
+	link.classList.add("save_btn");
 
 	//add the new audio element to li
 	li.appendChild(au);
-	
+	li.appendChild(document.createElement('br'));
 	//add the filename to the li
 	li.appendChild(document.createTextNode(filename+".wav "))
 
@@ -142,6 +144,7 @@ function createDownloadLink(blob) {
 	
 	//upload link
 	var upload = document.createElement('a');
+	upload.classList.add("upload_btn");
 	upload.href="#";
 	upload.innerHTML = "Upload";
 	upload.addEventListener("click", function(event){
@@ -164,4 +167,5 @@ function createDownloadLink(blob) {
 
 	//add the li element to the ol
 	recordingsList.appendChild(li);
+	maindiv.appendChild(recordingsList);
 }

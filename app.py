@@ -22,6 +22,10 @@ def upload():
 def record():
     return render_template('record.html')
 
+@app.route('/transcribe')
+def transcribe():
+    return render_template('rtt.html')
+
 @app.route('/uploader', methods=['POST'])
 def upload_file():
     transcript = ""
@@ -66,4 +70,4 @@ def upload_file():
         return render_template('transcribe.html', transcript=transcript)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(ssl_context='adhoc',host="0.0.0.0",port=9999,debug=True)

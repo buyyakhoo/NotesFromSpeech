@@ -13,12 +13,15 @@
 </head>
 <body>
     <header>
-        <h1>NotesFromSpeech</h1>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/upload">Upload</a></li>
-            <li><a href="/record">Record</a></li>
-        </ul>
+        <div class="container">        
+            <h1>NotesFromSpeech</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/record">Record</a></li>
+                <li><a href="/transcribe">Realtime Transcribe</a></li>
+            </ul>
+        </div>
     </header>
 
     {% block content %} 
@@ -26,6 +29,8 @@
 
         {% endblock %}
     {% endblock %}
+
+    
     {% block script %}
     {% endblock %}
 </body>

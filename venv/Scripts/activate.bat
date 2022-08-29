@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=D:\VS Code\Python Notes from speech\NotesFromSpeech\venv"
+set "VIRTUAL_ENV=D:\VS Code\Python Notes from speech\Experimental\NotesFromSpeech\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

@@ -1,0 +1,15 @@
+#transcribe {
+    word-wrap: break-word;
+    width: 90%;
+    height:80%;
+    background-color: rgb(35, 70, 145);
+    color: white;
+    font-size: 1rem;
+    resize: none;
+}
+.main, .main .container{
+    height:90%;
+}
+body{
+    height:100vh;
+}

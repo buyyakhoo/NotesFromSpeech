@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block css %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/normal.css')}}"
+/>
+<link rel="stylesheet" href="{{url_for('static', filename='css/rtt.css')}}" />
+{% endblock %} {% block title %} Transcribe {% endblock %} {% block content %}
+{% block transcribe %}
+<div class="main">
+  <div class="container">
+      <h1>Transcript</h1>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <select id="lang">
+        <option value="en-US" selected>English</option>
+        <option value="th-TH">Thai</option>
+      </select>
+      <br />
+      <br />
+      <textarea id="transcribe" placeholder="AAAAA"></textarea>
+  </div>
+</div>
+{% endblock %} {% endblock %} {% block script %}
+<script src="{{url_for('static', filename='js/rtt.js')}}"></script>
+{% endblock script %}
